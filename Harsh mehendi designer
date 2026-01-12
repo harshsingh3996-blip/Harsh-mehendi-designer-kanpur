@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Harsh Mehendi Designer | Kanpur</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+:root{
+  --main:#8b2c2c;
+  --light:#fdf2f2;
+}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,Arial}
+body{background:#fff;color:#333}
+
+/* Header */
+header{
+  background:linear-gradient(135deg,#8b2c2c,#c94b4b);
+  color:#fff;
+  padding:45px 20px;
+  text-align:center;
+}
+header h1{font-size:34px}
+header p{opacity:.9;margin:10px 0}
+
+/* Buttons */
+.btn{
+  display:inline-block;
+  margin:10px;
+  padding:14px 30px;
+  border:2px solid #fff;
+  color:#fff;
+  text-decoration:none;
+  border-radius:30px;
+  transition:.3s;
+}
+.btn:hover{
+  background:#fff;
+  color:#8b2c2c;
+  transform:scale(1.08);
+}
+
+/* Sections */
+section{padding:55px 20px;max-width:1100px;margin:auto}
+h2{text-align:center;margin-bottom:30px;color:var(--main)}
+
+/* About */
+.about{text-align:center;font-size:16px;line-height:1.6}
+
+/* Gallery */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:15px;
+}
+.gallery img{
+  width:100%;
+  border-radius:18px;
+  transition:.3s;
+}
+.gallery img:hover{transform:scale(1.06)}
+
+/* Price */
+.price-box{
+  background:var(--light);
+  padding:22px;
+  border-radius:16px;
+  margin-bottom:18px;
+}
+.price-box h3{color:var(--main)}
+
+/* Booking Form */
+.form-box{
+  max-width:600px;
+  margin:auto;
+  background:#fff;
+  padding:25px;
+  border-radius:18px;
+  box-shadow:0 10px 30px rgba(0,0,0,.1);
+}
+.form-box input,
+.form-box select,
+.form-box textarea{
+  width:100%;
+  padding:12px;
+  margin-bottom:15px;
+  border:2px solid #ddd;
+  border-radius:12px;
+  font-size:15px;
+}
+.form-box button{
+  width:100%;
+  padding:14px;
+  background:none;
+  border:2px solid var(--main);
+  color:var(--main);
+  font-size:16px;
+  border-radius:30px;
+  cursor:pointer;
+  transition:.3s;
+}
+.form-box button:hover{
+  background:var(--main);
+  color:#fff;
+  transform:scale(1.05);
+}
+
+/* Map */
+.map-box{
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+/* Contact */
+.contact{text-align:center}
+.contact a{
+  display:inline-block;
+  margin:12px;
+  padding:15px 34px;
+  border:2px solid var(--main);
+  color:var(--main);
+  border-radius:30px;
+  text-decoration:none;
+  transition:.3s;
+}
+.contact a:hover{
+  background:var(--main);
+  color:#fff;
+  transform:scale(1.08);
+}
+
+/* Footer */
+footer{
+  background:#111;
+  color:#aaa;
+  text-align:center;
+  padding:16px;
+  font-size:14px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Harsh Mehendi Designer</h1>
+  <p>Bridal & Party Mehendi • Kanpur</p>
+  <a class="btn" href="https://wa.me/919536995072" target="_blank">WhatsApp Booking</a>
+  <a class="btn" href="tel:9536995072">📞 Call 9536995072</a>
+</header>
+
+<section class="about">
+  <h2>About Me</h2>
+  <p>
+    Main Harsh Mehendi Designer hoon, Kanpur se.  
+    Bridal, Arabic aur traditional mehendi designs me expertise hai.  
+    Dark colour, clean finishing aur on-time service meri pehchan hai.
+  </p>
+</section>
+
+<section>
+  <h2>Gallery</h2>
+  <div class="gallery">
+    <img src="https://i.imgur.com/1.jpg">
+    <img src="https://i.imgur.com/2.jpg">
+    <img src="https://i.imgur.com/3.jpg">
+    <img src="https://i.imgur.com/4.jpg">
+  </div>
+</section>
+
+<section>
+  <h2>Bridal Price Chart</h2>
+  <div class="price-box"><h3>Basic Bridal – ₹3,000+</h3></div>
+  <div class="price-box"><h3>Standard Bridal – ₹5,000+</h3></div>
+  <div class="price-box"><h3>Premium Bridal – ₹8,000+</h3></div>
+  <div class="price-box"><h3>Royal Bridal – ₹12,000+</h3></div>
+</section>
+
+<section>
+  <h2>Booking Form</h2>
+  <div class="form-box">
+    <form onsubmit="sendWhatsApp(); return false;">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="tel" id="phone" placeholder="Mobile Number" required>
+      <input type="date" id="date" required>
+      <select id="package" required>
+        <option value="">Select Package</option>
+        <option>Basic Bridal</option>
+        <option>Standard Bridal</option>
+        <option>Premium Bridal</option>
+        <option>Royal Bridal</option>
+      </select>
+      <textarea id="message" rows="4" placeholder="Event Address / Message"></textarea>
+      <button type="submit">Book Now on WhatsApp</button>
+    </form>
+  </div>
+</section>
+
+<section>
+  <h2>Google Map Location</h2>
+  <div class="map-box">
+    <iframe 
+      src="https://www.google.com/maps?q=Kanpur&output=embed"
+      width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy">
+    </iframe>
+  </div>
+  <p style="text-align:center;margin-top:10px;">
+    📍 Service Available in Kanpur & Nearby Areas
+  </p>
+</section>
+
+<section class="contact">
+  <h2>Contact</h2>
+  <a href="https://wa.me/919536995072" target="_blank">📲 WhatsApp</a>
+  <a href="tel:9536995072">📞 Call 9536995072</a>
+</section>
+
+<footer>
+  © 2026 Harsh Mehendi Designer | All Rights Reserved
+</footer>
+
+<script>
+function sendWhatsApp(){
+  var name = document.getElementById("name").value;
+  var phone = document.getElementById("phone").value;
+  var date = document.getElementById("date").value;
+  var pack = document.getElementById("package").value;
+  var msg = document.getElementById("message").value;
+
+  var text =
+    "New Mehendi Booking%0A%0A" +
+    "Name: " + name + "%0A" +
+    "Mobile: " + phone + "%0A" +
+    "Date: " + date + "%0A" +
+    "Package: " + pack + "%0A" +
+    "Message: " + msg;
+
+  window.open("https://wa.me/919536995072?text=" + text, "_blank");
+}
+</script>
+</body>
+</html>
